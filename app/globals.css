@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  /* Fonts */
+  --font-epilogue: "Epilogue", sans-serif;
+  --font-clash: "Clash Display", sans-serif;
+
+  /* Colors */
+  --color-primary: #4640DE;
+  --color-secondary-blue: #26A4FF;
+  --color-navy: #202430;
+  --color-grey: #515B6F;
+  --color-white: #FFFFFF;
+
+  /* Shadows */
+  --shadow-search-1: 0px 2.71px 4.4px 0px #C0C0C007;
+  --shadow-search-2: 0px 6.86px 11.12px 0px #C0C0C00A;
+  --shadow-search-3: 0px 14px 22.68px 0px #C0C0C00C;
+  --shadow-search-4: 0px 28.84px 46.72px 0px #C0C0C00F;
+  --shadow-search-5: 0px 79px 128px 0px #C0C0C017;
+}
+
+@layer base {
+  body {
+    @apply font-[family-name:var(--font-epilogue)] text-[var(--color-navy)] antialiased;
+  }
+
+  .font-clash {
+    font-family: var(--font-clash);
+  }
+}
+
+/* Custom Shadow Utility for Search Bar */
+.shadow-search {
+  box-shadow:
+    var(--shadow-search-1),
+    var(--shadow-search-2),
+    var(--shadow-search-3),
+    var(--shadow-search-4),
+    var(--shadow-search-5);
+}
